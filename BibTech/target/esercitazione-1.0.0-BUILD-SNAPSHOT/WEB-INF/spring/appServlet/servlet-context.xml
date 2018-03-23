@@ -3,6 +3,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="
 		http://www.springframework.org/schema/mvc 
 		http://www.springframework.org/schema/mvc/spring-mvc.xsd
@@ -14,6 +18,7 @@
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->		
 	<context:component-scan base-package="it.accenture.esercitazione" />
 	<mvc:annotation-driven/>
+	<mvc:resources mapping="/resources/**" location="/resources/" />
 	<mvc:resources mapping="/webjars/**" location="/webjars/" />
 	
 	<!-- Enables the Spring MVC @Controller programming model -->
@@ -28,6 +33,4 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 
-
-	
 </beans:beans>

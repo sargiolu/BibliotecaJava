@@ -18,6 +18,7 @@
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->		
 	<context:component-scan base-package="it.accenture.esercitazione" />
 	<mvc:annotation-driven/>
+	<mvc:resources mapping="/resources/**" location="/resources/" />
 	<mvc:resources mapping="/webjars/**" location="/webjars/" />
 	
 	<!-- Enables the Spring MVC @Controller programming model -->
